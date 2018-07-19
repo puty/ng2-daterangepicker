@@ -32,6 +32,7 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
+    "@types/jquery": "^3.3.4",
     "bootstrap-daterangepicker": "^2.1.25"
   },
   "peerDependencies": {
@@ -40,17 +41,17 @@
     "moment": "^2.19.1"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.0",
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.1",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/platform-server": "^4.0.1",
-    "@angular/router": "^4.0.0",
+    "@angular/cli": "^1.6.0",
+    "@angular/common": "^6.0.0",
+    "@angular/compiler": "^6.0.0",
+    "@angular/compiler-cli": "^6.0.1",
+    "@angular/core": "^6.0.0",
+    "@angular/forms": "^6.0.0",
+    "@angular/http": "^6.0.0",
+    "@angular/platform-browser": "^6.0.0",
+    "@angular/platform-browser-dynamic": "^6.0.0",
+    "@angular/platform-server": "^6.0.1",
+    "@angular/router": "^6.0.0",
     "@types/jasmine": "2.5.54",
     "@types/node": "~8.0.24",
     "codelyzer": "~3.1.2",
@@ -65,10 +66,10 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "moment": "^2.18.1",
     "protractor": "~5.1.0",
-    "rxjs": "^5.1.0",
+    "rxjs": "^6.1.0",
     "ts-node": "~3.3.0",
     "tslint": "~5.6.0",
-    "typescript": "~2.4.2",
+    "typescript": "~2.7.2",
     "zone.js": "^0.8.4"
   }
 }

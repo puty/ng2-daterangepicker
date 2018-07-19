@@ -1,6 +1,5 @@
 import { Directive, OnInit, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
 import { KeyValueDiffer, KeyValueDiffers, ElementRef, OnDestroy, DoCheck  } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { DaterangepickerConfig } from './config.service';
 
 import * as $ from "jquery";
@@ -35,8 +34,8 @@ export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoChe
         private config: DaterangepickerConfig,
         private differs: KeyValueDiffers
     ) {
-        this._differ['options'] = differs.find(this.options).create(null);
-        this._differ['settings'] = differs.find(this.config.settings).create(null);
+        this._differ['options'] = differs.find(this.options).create();
+        this._differ['settings'] = differs.find(this.config.settings).create();
     }
 
     ngAfterViewInit() {
@@ -49,6 +48,7 @@ export class DaterangePickerComponent implements AfterViewInit, OnDestroy, DoChe
         this.targetOptions = Object.assign({}, this.config.settings, this.options);
 
         // cast $ to any to avoid jquery type checking
+        console.log(this.input.nativeElement);
         (<any>$(this.input.nativeElement)).daterangepicker(this.targetOptions, this.callback.bind(this));
 
         this.datePicker = (<any>$(this.input.nativeElement)).data('daterangepicker');
